@@ -31,7 +31,7 @@ Here are the error logs that happened in the application and a bit of explanatio
 **If you can't access your error log** follow these steps: 
 
 * Open in your editor **/oc/bootstrap.php** (accessed from file manager or FTP)
-* Search for **=== 'reoc.lo'** and replace it with **!== 'reoc.lo'**
+* Search for **=== 'reoc.lo'** and replace it with **!== 'reoc.lo'** (change Ligne 36 from **elseif (OC_DEBUG OR $_SERVER['SERVER_NAME'] == 'reoc.lo'** to **elseif (OC_DEBUG OR $_SERVER['SERVER_NAME'] != 'reoc.lo')** )
 * Now you should see the error with some debug information in the footer
 * Revert the changes on the bootstrap.php file
 
